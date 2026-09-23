@@ -7,8 +7,12 @@ import {
 import heroImage from "@/assets/hero-practitioner.jpg";
 import aboutImage from "@/assets/about-practitioner.jpg";
 import galleryImage from "@/assets/movement-gallery.jpg";
-import spineConditions from "@/assets/spine-conditions.jpg";
-import postureConditions from "@/assets/posture-conditions.jpg";
+import scoliosisImage from "@/assets/condition-skolioz.jpg";
+import kyphosisImage from "@/assets/condition-kifoz.jpg";
+import lordosisImage from "@/assets/condition-lordoz.jpg";
+import valgusImage from "@/assets/condition-valqus.jpg";
+import flatFeetImage from "@/assets/condition-yastipencelik.jpg";
+import postureImage from "@/assets/condition-durus.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -28,12 +32,12 @@ const whatsapp = "https://wa.me/994505595598";
 const telegram = "https://t.me/neztimez8";
 
 const services = [
-  { image: spineConditions, crop: "crop-left", title: "Skolioz", text: "Onurğanın düzgün vəziyyətinin və hərəkət keyfiyyətinin dəstəklənməsi." },
-  { image: spineConditions, crop: "crop-center", title: "Kifoz", text: "Duruş və bədən mexanikasının qiymətləndirilməsi." },
-  { image: spineConditions, crop: "crop-right", title: "Lordoz", text: "Onurğa sağlamlığı və balansın bərpası." },
-  { image: postureConditions, crop: "crop-left", title: "Valqus", text: "Düzgün ayaq vəziyyəti və hərəkət nəzarəti." },
-  { image: postureConditions, crop: "crop-center", title: "Yastıpəncəlik", text: "Ayaq sağlamlığı və düzgün dayağın qurulması." },
-  { image: postureConditions, crop: "crop-right", title: "Duruş problemləri", text: "Sağlam və estetik duruş üçün fərdi yanaşma." },
+  { image: scoliosisImage, title: "Skolioz", text: "Onurğanın düzgün vəziyyətinin və hərəkət keyfiyyətinin dəstəklənməsi." },
+  { image: kyphosisImage, title: "Kifoz", text: "Duruş və bədən mexanikasının qiymətləndirilməsi." },
+  { image: lordosisImage, title: "Lordoz", text: "Onurğa sağlamlığı və balansın bərpası." },
+  { image: valgusImage, title: "Valqus", text: "Düzgün ayaq vəziyyəti və hərəkət nəzarəti." },
+  { image: flatFeetImage, title: "Yastıpəncəlik", text: "Ayaq sağlamlığı və düzgün dayağın qurulması." },
+  { image: postureImage, title: "Duruş problemləri", text: "Sağlam və estetik duruş üçün fərdi yanaşma." },
 ];
 
 const credentials = [
@@ -105,7 +109,7 @@ function Index() {
       <section id="xidmetler" className="container section-pad">
         <SectionTitle>İxtisaslaşma</SectionTitle>
         <div className="service-grid">
-          {services.map(({ image, crop, title, text }) => <article className="service-card" key={title}><div className="service-image"><img className={crop} src={image} alt={`${title} üçün klinik vizual`} width={1536} height={512} loading="lazy" /></div><h3>{title}</h3><p>{text}</p></article>)}
+          {services.map(({ image, title, text }) => <article className="service-card" key={title}><div className="service-image"><img src={image} alt={`${title} üçün uşaq reabilitasiyası vizualı`} width={1024} height={768} loading="lazy" /></div><h3>{title}</h3><p>{text}</p></article>)}
         </div>
       </section>
 
