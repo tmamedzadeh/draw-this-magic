@@ -35,14 +35,14 @@ const services = [
 ];
 
 const credentials = [
-  [Award, "Qırmızı diplom", "Gimnastika üzrə məşqçi"],
-  [BadgeCheck, "AGF", "Lisenziya"],
-  [Dumbbell, "Personal Trainer", "Advanced Instructor"],
-  [UsersRound, "Functional Corrective", "Exercise Specialist"],
-  [Sparkles, "Personal Coach", "Fərdi yanaşma"],
-  [HeartPulse, "Klinik biomexanika", "Dayaq-hərəkət aparatı"],
-  [UsersRound, "Rapid Personal Transformation", "1st level / 2nd level"],
-  [Award, "Rusiya reyestri", "Fiziki reabilitasiya mütəxəssisi"],
+  { icon: Award, title: "Qırmızı diplom", text: "Gimnastika üzrə məşqçi" },
+  { icon: BadgeCheck, title: "AGF", text: "Lisenziya" },
+  { icon: Dumbbell, title: "Personal Trainer", text: "Advanced Instructor" },
+  { icon: UsersRound, title: "Functional Corrective", text: "Exercise Specialist" },
+  { icon: Sparkles, title: "Personal Coach", text: "Fərdi yanaşma" },
+  { icon: HeartPulse, title: "Klinik biomexanika", text: "Dayaq-hərəkət aparatı" },
+  { icon: UsersRound, title: "Rapid Personal Transformation", text: "1st level / 2nd level" },
+  { icon: Award, title: "Rusiya reyestri", text: "Fiziki reabilitasiya mütəxəssisi" },
 ];
 
 function Brand() {
@@ -118,7 +118,7 @@ function Index() {
         <div className="about-photo"><img src={aboutImage} alt="Nəzrin Kərimova" width={896} height={1280} loading="lazy"/><span>Səbir<br/>Duruş<br/>Güvən<br/>Hərəkət<br/>İnkişaf ♡</span></div>
         <div className="credentials">
           <SectionTitle>Sertifikatlar və ixtisaslar</SectionTitle>
-          <div className="credential-grid">{credentials.map(([Icon,title,text]) => <article key={title as string}><Icon/><div><b>{title as string}</b><span>{text as string}</span></div></article>)}</div>
+          <div className="credential-grid">{credentials.map(({ icon: Icon, title, text }) => <article key={title}><Icon/><div><b>{title}</b><span>{text}</span></div></article>)}</div>
         </div>
       </section>
 
