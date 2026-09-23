@@ -109,7 +109,7 @@ function Index() {
       <section id="xidmetler" className="container section-pad">
         <SectionTitle>İxtisaslaşma</SectionTitle>
         <div className="service-grid">
-          {services.map(({ image, crop, title, text }) => <article className="service-card" key={title}><div className="service-image"><img className={crop} src={image} alt={`${title} üçün klinik vizual`} width={1536} height={512} loading="lazy" /></div><h3>{title}</h3><p>{text}</p></article>)}
+          {services.map(({ image, title, text }) => <article className="service-card" key={title}><div className="service-image"><img src={image} alt={`${title} üçün uşaq klinik vizualı`} width={1024} height={768} loading="lazy" /></div><h3>{title}</h3><p>{text}</p></article>)}
         </div>
       </section>
 
