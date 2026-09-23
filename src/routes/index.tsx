@@ -7,6 +7,8 @@ import {
 import heroImage from "@/assets/hero-practitioner.jpg";
 import aboutImage from "@/assets/about-practitioner.jpg";
 import galleryImage from "@/assets/movement-gallery.jpg";
+import spineConditions from "@/assets/spine-conditions.jpg";
+import postureConditions from "@/assets/posture-conditions.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -26,12 +28,12 @@ const whatsapp = "https://wa.me/994505595598";
 const telegram = "https://t.me/neztimez8";
 
 const services = [
-  { icon: Activity, title: "Skolioz", text: "Onurğanın düzgün vəziyyətinin və hərəkət keyfiyyətinin dəstəklənməsi." },
-  { icon: HeartPulse, title: "Kifoz", text: "Duruş və bədən mexanikasının qiymətləndirilməsi." },
-  { icon: Sparkles, title: "Lordoz", text: "Onurğa sağlamlığı və balansın bərpası." },
-  { icon: Footprints, title: "Valqus", text: "Düzgün ayaq vəziyyəti və hərəkət nəzarəti." },
-  { icon: Footprints, title: "Yastıpəncəlik", text: "Ayaq sağlamlığı və düzgün dayağın qurulması." },
-  { icon: Activity, title: "Duruş problemləri", text: "Sağlam və estetik duruş üçün fərdi yanaşma." },
+  { image: spineConditions, crop: "crop-left", title: "Skolioz", text: "Onurğanın düzgün vəziyyətinin və hərəkət keyfiyyətinin dəstəklənməsi." },
+  { image: spineConditions, crop: "crop-center", title: "Kifoz", text: "Duruş və bədən mexanikasının qiymətləndirilməsi." },
+  { image: spineConditions, crop: "crop-right", title: "Lordoz", text: "Onurğa sağlamlığı və balansın bərpası." },
+  { image: postureConditions, crop: "crop-left", title: "Valqus", text: "Düzgün ayaq vəziyyəti və hərəkət nəzarəti." },
+  { image: postureConditions, crop: "crop-center", title: "Yastıpəncəlik", text: "Ayaq sağlamlığı və düzgün dayağın qurulması." },
+  { image: postureConditions, crop: "crop-right", title: "Duruş problemləri", text: "Sağlam və estetik duruş üçün fərdi yanaşma." },
 ];
 
 const credentials = [
@@ -103,7 +105,7 @@ function Index() {
       <section id="xidmetler" className="container section-pad">
         <SectionTitle>İxtisaslaşma</SectionTitle>
         <div className="service-grid">
-          {services.map(({icon: Icon, title, text}) => <article className="service-card" key={title}><Icon/><h3>{title}</h3><p>{text}</p></article>)}
+          {services.map(({ image, crop, title, text }) => <article className="service-card" key={title}><div className="service-image"><img className={crop} src={image} alt={`${title} üçün klinik vizual`} width={1536} height={512} loading="lazy" /></div><h3>{title}</h3><p>{text}</p></article>)}
         </div>
       </section>
 
