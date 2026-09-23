@@ -7,8 +7,12 @@ import {
 import heroImage from "@/assets/hero-practitioner.jpg";
 import aboutImage from "@/assets/about-practitioner.jpg";
 import galleryImage from "@/assets/movement-gallery.jpg";
-import spineConditions from "@/assets/spine-conditions.jpg";
-import postureConditions from "@/assets/posture-conditions.jpg";
+import conditionSkolioz from "@/assets/condition-skolioz.jpg";
+import conditionKifoz from "@/assets/condition-kifoz.jpg";
+import conditionLordoz from "@/assets/condition-lordoz.jpg";
+import conditionValqus from "@/assets/condition-valqus.jpg";
+import conditionYastipencelik from "@/assets/condition-yastipencelik.jpg";
+import conditionDurus from "@/assets/condition-durus.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
