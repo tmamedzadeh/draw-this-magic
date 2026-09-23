@@ -32,12 +32,12 @@ const whatsapp = "https://wa.me/994505595598";
 const telegram = "https://t.me/neztimez8";
 
 const services = [
-  { image: spineConditions, crop: "crop-left", title: "Skolioz", text: "Onurğanın düzgün vəziyyətinin və hərəkət keyfiyyətinin dəstəklənməsi." },
-  { image: spineConditions, crop: "crop-center", title: "Kifoz", text: "Duruş və bədən mexanikasının qiymətləndirilməsi." },
-  { image: spineConditions, crop: "crop-right", title: "Lordoz", text: "Onurğa sağlamlığı və balansın bərpası." },
-  { image: postureConditions, crop: "crop-left", title: "Valqus", text: "Düzgün ayaq vəziyyəti və hərəkət nəzarəti." },
-  { image: postureConditions, crop: "crop-center", title: "Yastıpəncəlik", text: "Ayaq sağlamlığı və düzgün dayağın qurulması." },
-  { image: postureConditions, crop: "crop-right", title: "Duruş problemləri", text: "Sağlam və estetik duruş üçün fərdi yanaşma." },
+  { image: conditionSkolioz, title: "Skolioz", text: "Onurğanın düzgün vəziyyətinin və hərəkət keyfiyyətinin dəstəklənməsi." },
+  { image: conditionKifoz, title: "Kifoz", text: "Duruş və bədən mexanikasının qiymətləndirilməsi." },
+  { image: conditionLordoz, title: "Lordoz", text: "Onurğa sağlamlığı və balansın bərpası." },
+  { image: conditionValqus, title: "Valqus", text: "Düzgün ayaq vəziyyəti və hərəkət nəzarəti." },
+  { image: conditionYastipencelik, title: "Yastıpəncəlik", text: "Ayaq sağlamlığı və düzgün dayağın qurulması." },
+  { image: conditionDurus, title: "Duruş problemləri", text: "Sağlam və estetik duruş üçün fərdi yanaşma." },
 ];
 
 const credentials = [
